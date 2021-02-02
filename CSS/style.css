@@ -105,6 +105,12 @@ Header
     box-shadow: var(--outer-shadow);
 }
 
+.hover-in-shadow
+{
+    position: relative;
+    z-index: 1;
+}
+
 .header .logo a
 {
     display: inline-block;
