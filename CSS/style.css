@@ -142,6 +142,145 @@ Header
     align-items: center;
 }
 
+.btn-1
+{
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--skin-color);
+    background-color: transparent;
+    line-height: 1.5;
+    cursor: pointer;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-1:after
+{
+    border-radius: 30px;
+}
+
+.effect-wrap .effect
+{
+    position: absolute;
+    z-index: -1;
+}
+
+.effect-1
+{
+    width: 30px;
+    height: 30px;
+    border: 4px solid #8a49ff;
+    right: 10%;
+    bottom: 10%;
+    animation: spin 10s linear infinite;
+}
+
+.effect-2
+{
+    left: 3%;
+    bottom: 20%;
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    animation: topBounce 3s ease-in-out infinite;
+}
+
+.effect-2 div
+{
+    height: 3px;
+    width: 3px;
+    background-color: #ff9c07;
+    margin: 0 3px 8px;
+}
+.effect-3
+{
+    height: 180px;
+    width: 180px;
+    border: 25px solid var(--skin-color);
+    border-radius: 50%;
+    left: 50%;
+    top: -120px;
+    animation: leftBounce 3s ease-in-out infinite;
+}
+
+.effect-4
+{
+    border-top: 30px solid transparent;
+    border-left: 30px solid #06d79c;
+    left: 30%;
+    top: 20%;
+    animation: spin 10s linear infinite;
+}
+
+.effect-4:before
+{
+    content: '';
+    border-top: 30px solid transparent;
+    border-left: 30px solid #06d79c;
+    position: absolute;
+    opacity: 0.5;
+    left: -35px; 
+    top: -25px;
+}
+
+.effect-5
+{
+    height: 50px;
+    width: 50px;
+    right: 10%;
+    top: 30%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 50%;
+    overflow: hidden;
+    animation: spin 10s linear infinite;
+}
+
+.effect-5 div
+{
+    width: 1px;
+    background-color: #4dd0e1;
+}
+@keyframes spin
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes topBounce
+{
+    0%, 100%
+    {
+        transform: translateY(0);
+    }
+    50%
+    {
+        transform: translateY(50px);
+    }
+}
+
+@keyframes leftBounce
+{
+    0%, 100%
+    {
+        transform: translateX(0);
+    }
+    50%
+    {
+        transform: translateX(50px);
+    }
+}
+
+
 .header .logo a
 {
     display: inline-block;
@@ -309,9 +448,13 @@ Navigation menu
 /*----------------------
 Home section
 ----------------------*/
+.home-section
+{
+    position: relative;
+}
+
 .home-section .full-screen
 {
-    background-color: blue;
     padding: 50px 0;
     min-height: 100vh;
 }
@@ -323,16 +466,51 @@ Home section
     padding: 0 15px;  
 }
 
-.home-section .home-text
+.home-section .home-text p
 {
-    background-color: violet;
+    color: var(--text-black-300);
+    font-size: 20px;
+    text-transform: capitalize;
+    margin: 0;
 }
 
-.home-section .home-img
+.home-section .home-text h2
 {
-    background-color: red;
+    font-size: 55px;
+    font-weight: 700;
+    color: var(--text-black-900);
+    margin: 0;
 }
 
+.home-section .home-text h1
+{
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--text-black-700);
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.home-section .home-text .btn-1
+{
+    margin-top: 30px;
+}
+
+.home-section .home-img .img-box
+{
+    max-width: 450px;
+    display: block;
+    margin: auto;
+    border-radius: 50%;
+    padding: 15px;
+}
+
+.home-section .home-img .img-box img
+{
+    width: 100%;
+    border-radius: 50%;
+    border: 10px solid transparent;
+}
 
 
 
