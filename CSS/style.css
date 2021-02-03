@@ -105,10 +105,41 @@ Header
     box-shadow: var(--outer-shadow);
 }
 
+.inner-shadow
+{
+    box-shadow: var(--inner-shadow);
+}
+
 .hover-in-shadow
 {
     position: relative;
     z-index: 1;
+}
+
+.hover-in-shadow:hover
+{
+    box-shadow: var(--outer-shadow-0);
+}
+
+.hover-in-shadow:after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.hover-in-shadow:hover:after
+{
+    box-shadow: var(--inner-shadow);
+}
+
+.align-items-center
+{
+    align-items: center;
 }
 
 .header .logo a
@@ -136,6 +167,11 @@ Header
     border-radius: 50%;
     justify-content: center;
     transition: all 0.3s ease;
+}
+
+.header .hamburger-btn:after
+{
+    border-radius: 50%;
 }
 
 .header .hamburger-btn span
@@ -166,3 +202,149 @@ Header
 {
     top: 6px;
 }
+
+
+
+/*----------------------
+Navigation menu
+----------------------*/
+.nav-menu
+{
+    position: fixed;
+    background-color: var(--bg-black-50);
+    padding: 0 15px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+}
+
+.nav-menu .close-nav-menu
+{
+    height: 40px;
+    width: 40px;
+    display: block;
+    font-size: 35px;
+    line-height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    text-align: center;
+    color: var(--text-black-600);
+    transition: all 0.3s ease;
+}
+
+.nav-menu .close-nav-menu:after
+{
+    border-radius: 50%;
+}
+
+.nav-menu-inner
+{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-menu ul
+{
+    padding: 15px;
+}
+
+.nav-menu ul li
+{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.nav-menu ul li:last-child
+{
+    margin-bottom: 0;
+}
+
+.nav-menu ul li a
+{
+    display: inline-block;
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-black-700);
+    padding: 5px 30px;
+    text-transform: capitalize;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.nav-menu ul li a.active
+{
+    color: var(--skin-color);
+}
+
+.nav-menu ul li a:after
+{
+    border-radius: 30px;
+}
+
+
+.nav-menu .copyright-text
+{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    font-size: 15px;
+    color: var(--text-black-600);
+    transform: translateY(-50%) rotate(-90deg);
+    left: -90px;
+}
+
+
+
+/*----------------------
+Home section
+----------------------*/
+.home-section .full-screen
+{
+    background-color: blue;
+    padding: 50px 0;
+    min-height: 100vh;
+}
+
+.home-section .home-text, .home-section .home-img
+{
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;  
+}
+
+.home-section .home-text
+{
+    background-color: violet;
+}
+
+.home-section .home-img
+{
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
