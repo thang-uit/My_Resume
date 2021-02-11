@@ -967,18 +967,119 @@ Service section
 
 
 
+/*----------------------
+Portfolio section
+----------------------*/
+.portfolio-section
+{
+    padding: 80px 0 80px;
+    min-height: 100vh; 
+}
 
+.portfolio-section .section-title
+{
+    margin-bottom: 40px;
+}
 
+.portfolio-section .portfolio-filter
+{
+    padding: 0 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
 
+.portfolio-section .filter-item
+{
+    display: inline-block;
+    margin: 0 5px 10px;
+    padding: 5px 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-black-600);
+    text-transform: capitalize;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
 
+.portfolio-section .filter-item:hover:not(.active)
+{
+    opacity: 0.6;
+}
 
+.portfolio-section .filter-item.active
+{
+    color: var(--skin-color);
+}
 
+.portfolio-section .portfolio-item
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
 
+.portfolio-section .portfolio-item-inner
+{
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
 
+.portfolio-section .portfolio-item-img img
+{
+    border-radius: 5px;
+    width: 100%;
+    transition: all 0.5s ease;
+}
 
+.portfolio-section .portfolio-item-inner:hover .portfolio-item-img img
+{
+    transform: translateY(-25px);
+}
 
+.portfolio-section .portfolio-item-img
+{
+    position: relative;
+}
 
+.portfolio-section .portfolio-item-img .view-project
+{
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--skin-color);
+    transition: all 0.3s ease;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transform: translateY(-5px);
+    opacity: 0;
+    z-index: -1;
+}
 
+.portfolio-section .portfolio-item-inner:hover .view-project
+{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.portfolio-section .portfolio-item-details
+{
+    display: none;
+}
+
+.portfolio-section .portfolio-item-inner p
+{
+    font-size: 16px;
+    margin: 10px 0 0;
+    color: var(--text-black-600);
+    text-transform: capitalize;
+}
 
 
 
