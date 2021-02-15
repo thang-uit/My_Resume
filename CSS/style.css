@@ -67,7 +67,6 @@ body
     line-height: 1.5;
     overflow-x: hidden;
     background-color: var(--bg-black-50);
-    overflow-y: hidden;
 }
 
 
@@ -1097,6 +1096,110 @@ Portfolio popup
     height: 100%;
     z-index: 1000;
     overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.portfolio-popup .pp-details
+{
+    max-width: 1350px;
+    width: calc(85% + 30px);
+    margin: auto;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.portfolio-popup .pp-details-inner
+{
+    padding: 30px 0;
+}
+
+.portfolio-popup .pp-title
+{
+    padding: 0 15px;
+}
+
+.portfolio-popup .pp-title h2
+{
+    font-size: 28px;
+    color: var(--text-black-900);
+    text-transform: capitalize;
+    font-weight: 600;
+    margin: 0 0 5px;
+}
+
+.portfolio-popup .pp-title p
+{
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-black-600);
+    margin: 0 0 15px;
+    border-bottom: 1px solid var(--bg-black-100);
+    padding-bottom: 10px;
+}
+
+.portfolio-popup .pp-title p span
+{
+    font-weight: 400; 
+}
+
+.portfolio-popup .pp-project-details h3
+{
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-black-700);
+    margin: 0 0 15px;
+    text-transform: capitalize;
+}
+
+.portfolio-popup .description
+{
+    flex: 0 0 65%;
+    max-width: 65%;
+    padding: 0 15px;
+}
+
+.portfolio-popup .description p
+{
+    font-size: 16px;
+    color: var(--text-black-600);
+    line-height: 26px;
+    margin: 0;
+}
+
+.portfolio-popup .info
+{
+    flex: 0 0 35%;
+    max-width: 35%;
+    padding: 0 15px;
+}
+
+.portfolio-popup .info ul li
+{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--text-black-600);
+    font-size: 16px;
+}
+
+.portfolio-popup .info ul li span
+{
+    font-weight: 400; 
+}
+
+.portfolio-popup .info ul li:last-child
+{
+    margin-bottom: 0;
+}
+
+.portfolio-popup .separator
+{
+    height: 1px;
+    width: 100%;
+    display: block;
+    background-color: var(--bg-black-100);
 }
 
 .portfolio-popup .pp-img
@@ -1183,11 +1286,46 @@ Portfolio popup
     color: var(--text-black-600);
 }
 
+.portfolio-popup .pp-prev, .portfolio-popup .pp-next
+{
+    position: fixed;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 1010;
+    color: var(--text-black-900);
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
 
+.portfolio-popup .pp-prev:hover, .portfolio-popup .pp-next:hover
+{
+    opacity: 1;
+    transform: scale(1.5);
+}
 
+.portfolio-popup .pp-prev i, .portfolio-popup .pp-next i
+{
+    line-height: 40px;
+}
 
+.portfolio-popup .pp-prev i
+{
+    transform: rotate(180deg);
+}
 
+.portfolio-popup .pp-prev
+{
+    left: 15px;
+}
 
+.portfolio-popup .pp-next
+{
+    right: 15px;
+}
 
 
 

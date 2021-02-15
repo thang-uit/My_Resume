@@ -1,7 +1,7 @@
 /*-------------------- About section tabs --------------------*/
 (() =>
 {
-    const aboutSection = document.querySelector(".about-section");
+    const aboutSection = document.querySelector(".about-section"),
     tabsContainer = document.querySelector(".about-tabs");
     tabsContainer.addEventListener("click", (event) => 
     {
@@ -18,6 +18,10 @@
     });
 })();   
 
-
-
-
+/*-------------------- Portfolio filter and popup --------------------*/
+(() =>
+{
+    const filterContainer = document.querySelector(".portfolio-filter"),
+    portfolioItemsContainer = document.querySelector(".portfolio-items"),
+    portfolioItems = document.querySelectorAll(".portfolio-item");
+})();   
