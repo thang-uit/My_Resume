@@ -70,6 +70,10 @@ body
     cursor: url("../Image/Cursor/plane.png"), auto;
 }
 
+body.stop-scrolling
+{
+    overflow-y: hidden;
+}
 
 .header
 {
@@ -1107,9 +1111,16 @@ Portfolio popup
     width: 100%;
     height: 100%;
     z-index: 1000;
-    overflow-y: auto;
+    overflow-y: scroll;
     opacity: 0;
     visibility: hidden;
+    transition: all 0.5s ease;
+}
+
+.portfolio-popup.open
+{
+    visibility: visible;
+    opacity: 1;
 }
 
 .portfolio-popup .pp-details
