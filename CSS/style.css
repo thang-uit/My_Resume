@@ -71,7 +71,7 @@ body
     cursor: url("../Image/Cursor/plane.png"), auto;
 }
 
-body.stop-scrolling
+body.hidden-scrolling
 {
     overflow-y: hidden;
 }
@@ -1164,6 +1164,12 @@ Portfolio popup
     max-height: 0;
     overflow: hidden;
     opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.portfolio-popup .pp-details.active
+{
+    opacity: 1;
 }
 
 .portfolio-popup .pp-details-inner
@@ -1198,6 +1204,7 @@ Portfolio popup
 .portfolio-popup .pp-title p span
 {
     font-weight: 400; 
+    text-transform: capitalize;
 }
 
 .portfolio-popup .pp-project-details h3
@@ -1243,6 +1250,11 @@ Portfolio popup
 .portfolio-popup .info ul li span
 {
     font-weight: 400; 
+}
+
+.portfolio-popup .info ul li a
+{
+    color: var(--skin-color);
 }
 
 .portfolio-popup .info ul li:last-child
