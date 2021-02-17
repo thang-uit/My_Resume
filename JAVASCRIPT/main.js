@@ -69,11 +69,21 @@ function BodyScrollingToggle()
         {
             const portfolioItem = event.target.closest(".portfolio-item-inner").parentElement;
             itemIndex = Array.from(portfolioItem.parentElement.children).indexOf(portfolioItem);
-            console.log(itemIndex);
             screenshots = portfolioItems[itemIndex].querySelector(".portfolio-item-img img").getAttribute("data-screenshots");
             screenshots = screenshots.split(",");
+            if(screenshots.length === 1)
+            {
+                prevBtn.style.display = "none";
+                nextBtn.style.display = "none";
+            }
+            else
+            {
+                prevBtn.style.display = "block";
+                nextBtn.style.display = "block";
+            }
             slideIndex = 0;
             PopupToggle();
+            PopupSlideshow();
         }
     });
 
@@ -87,4 +97,44 @@ function BodyScrollingToggle()
         popup.classList.toggle("open");
         BodyScrollingToggle();
     }
+
+    function PopupSlideshow()
+    {
+        const imgsrc = screenshots[slideIndex];
+        const popupImg = popup.querySelector(".pp-img");
+        // activate loader until the popupIMG loaded
+        popup.querySelector(".pp-loader").classList.add("active");
+        popupImg.src = imgsrc;
+        popupImg.onload = () =>
+        {
+            popup.querySelector(".pp-loader").classList.remove("active");
+        }
+        popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + " of " + screenshots.length;
+    }
+
+    nextBtn.addEventListener("click", () =>
+    {
+        if(slideIndex === screenshots.length - 1)
+        {
+            slideIndex = 0;
+        }
+        else
+        {
+            slideIndex++;
+        }
+        PopupSlideshow();
+    })
+
+    prevBtn.addEventListener("click", () =>
+    {
+        if(slideIndex === 0)
+        {
+            slideIndex = screenshots.length - 1;
+        }
+        else
+        {
+            slideIndex--;
+        }
+        PopupSlideshow();
+    })
 })();   
