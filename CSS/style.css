@@ -598,7 +598,7 @@ About section
     display: inline-block;
     height: 40px;
     width: 40px;
-    font-size: 16px;
+    font-size: 20px;
     text-align: center;
     color: var(--text-black-600);
     margin: 0 4px;
@@ -1398,6 +1398,122 @@ Portfolio popup
 {
     right: 15px;
 }
+
+
+
+/*----------------------
+My friend Section
+----------------------*/
+.myfriend-section
+{
+    padding: 80px 0 80px;
+    min-height: 100vh;
+}
+
+.myfriend-section .friend-box
+{
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.myfriend-section .friend-slider
+{
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.myfriend-section .friend-slider-container
+{
+    display: flex;
+    transition: margin 1s ease;
+    align-items: center;
+}
+
+.myfriend-section .friend-item
+{
+    padding: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.myfriend-section .friend-item i
+{
+    position: absolute;
+    font-size: 30px;
+    color: var(--text-black-600);
+    opacity: 0.2;
+}
+
+.myfriend-section .friend-item i.left
+{
+    left: 5px;
+    top: 5px;
+}
+
+.myfriend-section .friend-item i.right
+{
+    right: 5px;
+    bottom: 5px;
+}
+
+.myfriend-section .friend-item p
+{
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--text-black-600);
+    margin: 0 0 30px;
+}
+
+.myfriend-section .friend-item img
+{
+    max-width: 150px;
+    border-radius: 50%;
+    display: inline-block;
+    width: 100%;
+}
+
+.myfriend-section .friend-item span
+{
+    display: block;
+    margin: 10px 0 0;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--text-black-700);
+    text-transform: capitalize;
+}
+
+.myfriend-section .friend-slider-nav
+{
+    margin-top: 30px;
+    text-align: center;
+}
+
+.myfriend-section .friend-slider-nav span
+{
+    height: 40px;
+    width: 40px;
+    color: var(--skin-color);
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3 ease;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.myfriend-section .friend-slider-nav span:after
+{
+    border-radius: 50%;
+}
+
+.myfriend-section .friend-slider-nav span i
+{
+    line-height: 40px;
+}
+
+
 
 
 

@@ -197,3 +197,61 @@ function BodyScrollingToggle()
         }
     }
 })();   
+
+
+
+/*-------------------- My friend Slider --------------------*/
+(() =>
+{
+    const sliderContainer = document.querySelector(".friend-slider-container"),
+    slides = sliderContainer.querySelectorAll(".friend-item"),
+    slideWidth = sliderContainer.offsetWidth,
+    prevBtn = document.querySelector(".friend-slider-nav .prev"),
+    nextBtn = document.querySelector(".friend-slider-nav .next");
+
+    let slideIndex = 0;
+
+    //Set width of all the slides
+    slides.forEach((slide) =>
+    {
+        slide.style.width = slideWidth + "px";
+    });
+
+    //Set width of sliderContainer
+    sliderContainer.style.width = slideWidth * slides.length + "px";
+
+    function Slider()
+    {
+        // Push img turn left
+        sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + "px";
+    }
+    
+    nextBtn.addEventListener("click", () => 
+    {
+        if(slideIndex === slides.length - 1) 
+        {
+            slideIndex = 0;
+        }
+        else
+        {
+            slideIndex++;
+        }
+        Slider(); 
+    });
+
+    prevBtn.addEventListener("click", () => 
+    {
+        if(slideIndex === 0) 
+        {
+            slideIndex = slides.length - 1;
+        }
+        else
+        {
+            slideIndex--;
+        }
+        Slider(); 
+    });
+
+})();  
+
+
