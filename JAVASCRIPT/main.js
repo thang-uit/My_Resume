@@ -207,9 +207,10 @@ function BodyScrollingToggle()
     slides = sliderContainer.querySelectorAll(".friend-item"),
     slideWidth = sliderContainer.offsetWidth,
     prevBtn = document.querySelector(".friend-slider-nav .prev"),
-    nextBtn = document.querySelector(".friend-slider-nav .next");
+    nextBtn = document.querySelector(".friend-slider-nav .next"),
+    activeSlide = sliderContainer.querySelector(".friend-item.active");
 
-    let slideIndex = 0;
+    let slideIndex = Array.from(activeSlide.parentElement.children).indexOf(activeSlide);
 
     //Set width of all the slides
     slides.forEach((slide) =>
@@ -219,12 +220,6 @@ function BodyScrollingToggle()
 
     //Set width of sliderContainer
     sliderContainer.style.width = slideWidth * slides.length + "px";
-
-    function Slider()
-    {
-        // Push img turn left
-        sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + "px";
-    }
     
     nextBtn.addEventListener("click", () => 
     {
@@ -252,6 +247,16 @@ function BodyScrollingToggle()
         Slider(); 
     });
 
+    function Slider()
+    {
+        // Deactivate existing active slide
+        sliderContainer.querySelector(".friend-item.active").classList.remove("active");
+        // Active new slide
+        slides[slideIndex].classList.add("active");
+        // Push img turn left
+        sliderContainer.style.marginLeft = -(slideWidth * slideIndex) + "px";
+    }
+    Slider();
 })();  
 
 
