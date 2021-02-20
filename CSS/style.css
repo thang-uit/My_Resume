@@ -8,7 +8,7 @@ Fonts
 /*----------------------
 Global style 
 ----------------------*/
-/*---- Define custom css variables ----*/
+/*---- Define custom css variables Light theme----*/
 :root
 {
     --bg-black-900: #000000;
@@ -23,6 +23,23 @@ Global style
     --outer-shadow-0: 0 0 0 #d0d0d0, 0 0 0 #f8f8f8;
     --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
     --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
+}
+
+/*---- Define custom css variables Dark theme ----*/
+body.dark
+{
+    --bg-black-900: #ffffff;
+    --bg-black-100: #353535;
+    --bg-black-50: #2b2c2f;
+    --bg-opacity: rgba(43, 44, 47, 0.5);
+    --text-black-900: #ffffff;
+    --text-black-700: #ffffff;
+    --text-black-600: #bbbbbb;
+    --text-black-300: #bbbbbb;
+    --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+    --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
+    --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
+    --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
 }
 
 *
@@ -535,7 +552,7 @@ Home section
 
 .home-section .home-text p
 {
-    color: var(--text-black-300);
+    color: var(--text-black-600);
     font-size: 20px;
     text-transform: capitalize;
     margin: 0;
@@ -553,7 +570,7 @@ Home section
 {
     font-size: 20px;
     font-weight: 500;
-    color: var(--text-black-700);
+    color: var(--text-black-600);
     margin: 0;
     text-transform: capitalize;
 }
@@ -941,6 +958,7 @@ Service section
     display: block;
     margin: 0 auto 30px;
     position: relative;
+    color: var(--text-black-600);
 }
 
 .service-section .service-item-inner .icon:after
