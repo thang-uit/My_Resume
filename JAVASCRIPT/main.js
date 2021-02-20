@@ -1,3 +1,74 @@
+/*-------------------- Display current year in navigation --------------------*/
+(() =>
+{
+    const Year = new Date();
+    document.getElementById("cr-year").innerHTML = Year.getFullYear();
+})();
+
+
+
+/*-------------------- Navigation menu --------------------*/
+(() =>
+{
+    const hamburgerBtn = document.querySelector(".hamburger-btn"),
+    navMenu = document.querySelector(".nav-menu"),
+    closenavBtn = document.querySelector(".close-nav-menu");
+    
+    function ShowNavMenu()
+    {
+        navMenu.classList.toggle("open");
+    }
+    hamburgerBtn.addEventListener("click", ShowNavMenu);
+    closenavBtn.addEventListener("click", ShowNavMenu);
+    
+    document.addEventListener("click", (event) => 
+    {
+        if(event.target.classList.contains("link-item"))
+        {
+            if(event.target.hash !== "")
+            {
+                event.preventDefault();
+                const hash = event.target.hash; // Get #
+
+                // Deactivate existing active section
+                document.querySelector(".section.active").classList.add("hide");
+                document.querySelector(".section.active").classList.remove("active");
+                // Active new section
+                document.querySelector(hash).classList.remove("hide");
+                document.querySelector(hash).classList.add("active");
+            
+                // Deactivate existing active navigation menu 'link-item'
+                navMenu.querySelector("li .active").classList.add("outer-shadow", "hover-in-shadow");
+                navMenu.querySelector("li .active").classList.remove("active", "inner-shadow");
+
+                if(navMenu.classList.contains("open"))
+                {
+                    // Active new navigation menu 'link-item'
+                    event.target.classList.remove("outer-shadow", "hover-in-shadow");
+                    event.target.classList.add("inner-shadow", "active");
+
+                    // Hide navigation menu
+                    navMenu.classList.remove("open");
+                }
+                else
+                {
+                    let navItems = navMenu.querySelectorAll(".link-item");
+                    navItems.forEach((item) =>
+                    {
+                        if(item.hash === hash)         
+                        {
+                            item.classList.remove("outer-shadow", "hover-in-shadow");  
+                            item.classList.add("inner-shadow", "active");
+                        }                                                         
+                    })
+                }
+            }
+        }
+    });
+})();
+
+
+
 /*-------------------- About section tabs --------------------*/
 (() =>
 {
@@ -258,5 +329,32 @@ function BodyScrollingToggle()
     }
     Slider();
 })();  
+
+
+
+/*-------------------- Hide all sections except section active --------------------*/
+(() =>
+{
+    const sections = document.querySelectorAll(".section");
+
+    sections.forEach((item) => 
+    {
+        if(!item.classList.contains("active"))
+        {
+            item.classList.add("hide");
+        }
+    })
+
+})(); 
+
+
+
+
+
+
+
+
+
+
 
 

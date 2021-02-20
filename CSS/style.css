@@ -39,6 +39,11 @@ Global style
     font-weight: 400;
 }
 
+html
+{
+    scroll-behavior: smooth;
+}
+
 :before, :after
 {
     box-sizing: border-box;
@@ -324,6 +329,13 @@ body.hidden-scrolling
     color: var(--skin-color);
 }
 
+.section.hide
+{
+    display: none;
+}
+
+
+
 /*----------------------
 Header
 ----------------------*/
@@ -406,6 +418,15 @@ Navigation menu
     opacity: 0;
     visibility: hidden;
     overflow-y: auto;
+    transition: all 0.3s ease-in;
+}
+
+.nav-menu.open
+{
+    visibility: visible;
+    opacity: 1;
+    z-index: 1050;
+    transition: all 0.3s ease-in;
 }
 
 .nav-menu .close-nav-menu
@@ -413,7 +434,7 @@ Navigation menu
     height: 40px;
     width: 40px;
     display: block;
-    font-size: 35px;
+    font-size: 50px;
     line-height: 35px;
     border-radius: 50%;
     position: absolute;
