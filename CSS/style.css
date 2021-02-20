@@ -132,6 +132,7 @@ body.hidden-scrolling
     top: 0;
     width: 100%;
     height: 100%;
+    z-index: -1;
     transition: all 0.3s ease;
 }
 
@@ -157,6 +158,7 @@ body.hidden-scrolling
     border-radius: 30px;
     transition: all 0.3s ease;
     display: inline-block;
+    border: none;
 }
 
 .btn-1:after
@@ -1566,15 +1568,65 @@ Contact Section
     word-break: break-word; /* Không bị tràn dòng ra ngoài */
 }
 
+.contact-section .contact-form
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 50px;
+}
 
+.contact-section .w-50
+{
+    padding: 0 15px;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
 
+.contact-section .input-group
+{
+    margin: 0 0 25px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
 
+.contact-section .input-group:after
+{
+    border-radius: 20px;
+}
 
+.contact-section .input-group .input-control
+{
+    height: 45px;
+    display: block;
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    padding: 0 15px;
+    color: var(--text-black-700); 
+}
 
+.contact-section .input-group .input-control:focus
+{
+    box-shadow: var(--inner-shadow);
+}
 
+.contact-section .input-group textarea.input-control
+{
+    height: 184px;
+    min-height: 184px;
+    padding-top: 15px;
+    resize: vertical;
+}
 
-
-
+.contact-section .submit-btn
+{
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: right;
+    padding: 0 15px;
+}
 
 
 
