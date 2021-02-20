@@ -418,7 +418,7 @@ Navigation menu
     opacity: 0;
     visibility: hidden;
     overflow-y: auto;
-    transition: all 0.3s ease-in;
+    transition: all 0.4s ease-in;
 }
 
 .nav-menu.open

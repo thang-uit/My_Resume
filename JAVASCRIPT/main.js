@@ -344,7 +344,6 @@ function BodyScrollingToggle()
             item.classList.add("hide");
         }
     })
-
 })(); 
 
 

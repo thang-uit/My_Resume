@@ -10,7 +10,16 @@
     <link rel="stylesheet" type="text/css" href="../CSS/style.css">
     <!-- Default color skin -->
     <link rel="stylesheet" type="text/css" href="../CSS/Skin/color-1.css">
+    <!-- Switcher -->
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-1" href="../CSS/Skin/color-1.css">
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-2" href="../CSS/Skin/color-2.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-3" href="../CSS/Skin/color-3.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-4" href="../CSS/Skin/color-4.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-5" href="../CSS/Skin/color-5.css" disabled>
+
+    <link rel="stylesheet" type="text/css" href="../CSS/style-switcher.css">
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.js"></script> -->
+
 
     <title>Nam Thang - My Resume</title>
 </head>
@@ -802,8 +811,27 @@
     <!-- Contact section end -->
 
 
+    <!-- Style switcher start  -->
+    <div class="style-switcher outer-shadow">
+        <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+            <i class="fa fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon outer-shadow hover-in-shadow">
+            <i class="fa fa-moon"></i>
+        </div>
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="SetActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="SetActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="SetActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="SetActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="SetActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- Style switcher end  -->
 
 
     <script src="../JAVASCRIPT/main.js"></script>
+    <script src="../JAVASCRIPT/style-switcher.js"></script>
 </body>
 </html>
