@@ -102,7 +102,7 @@
 
 @media(max-width: 700px)
 {
-    .service-section .service-item
+    .service-section .service-item, .contact-section .contact-item
     {
         flex: 0 0 100%;
         max-width: 100%;
