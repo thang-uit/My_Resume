@@ -8,7 +8,7 @@ Fonts
 /*----------------------
 Global style 
 ----------------------*/
-/*---- Define custom css variables Light theme----*/
+/*---- Define custom css variables Light theme ----*/
 :root
 {
     --bg-black-900: #000000;
@@ -24,7 +24,7 @@ Global style
     --inner-shadow: inset 3px 3px 3px #d0d0d0, inset -3px -3px 3px #f8f8f8;
     --inner-shadow-0: inset 0 0 0 #d0d0d0, inset 0 0 0 #f8f8f8;
 }
-
+/*---------------------------------------------------------------------------------*/
 /*---- Define custom css variables Dark theme ----*/
 body.dark
 {
@@ -41,6 +41,7 @@ body.dark
     --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
     --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
 }
+/*---------------------------------------------------------------------------------*/
 
 *
 {

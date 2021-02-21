@@ -1,0 +1,45 @@
+@media(max-width: 770px) 
+{
+    .home-section .home-text, .home-section .home-img
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .home-section .home-text
+    {
+        order: 2;
+        text-align: center;
+    }
+
+    .home-section .full-screen
+    {
+        padding: 100px 0;
+    }
+
+    .home-section .home-img .img-box
+    {
+        margin-bottom: 40px;
+        max-width: 400px;
+    }
+
+    .effect-4
+    {
+        left: 10%;
+        top: 10%;
+    }
+
+    .effect-6
+    {
+        right: 50%;
+        bottom: 3%;
+    }
+}
+
+@media(max-width: 574px)
+{
+    .home-section .home-img .img-box
+    {
+        max-width: 260px;
+    }
+} 
