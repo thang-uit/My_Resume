@@ -62,6 +62,7 @@
                         }                                                         
                     })
                 }
+                window.location.hash = hash;
             }
         }
     });
@@ -345,7 +346,3 @@ function BodyScrollingToggle()
         }
     })
 })(); 
-
-
-
-

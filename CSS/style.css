@@ -631,6 +631,7 @@ About section
 .about-section .about-img .social-links
 {
     margin-top: 20px;
+    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -1011,6 +1012,7 @@ Service section
     color: var(--text-black-600);
     margin: 0;
     line-height: 26px;
+    word-break: break-word; /* Không bị tràn dòng ra ngoài */
 }
 
 
@@ -1138,6 +1140,7 @@ Portfolio section
     margin: 10px 0 0;
     color: var(--text-black-600);
     text-transform: capitalize;
+    word-break: break-word; /* Không bị tràn dòng ra ngoài */
 }
 
 
@@ -1667,18 +1670,3 @@ Contact Section
     text-align: right;
     padding: 0 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

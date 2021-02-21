@@ -1,11 +1,17 @@
-@media(max-width: 770px) 
+
+@media(max-width: 780px) 
 {
-    .home-section .home-text, .home-section .home-img
+    .home-section .home-text, .home-section .home-img, .about-section .about-img, .about-section .about-info, .about-section .skills .skill-item, .portfolio-section .portfolio-item, .portfolio-popup .description, .portfolio-popup .info
     {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
+
+    
+    /*----------------------
+    Home section
+    ----------------------*/
     .home-section .home-text
     {
         order: 2;
@@ -34,6 +40,73 @@
         right: 50%;
         bottom: 3%;
     }
+
+
+
+    /*----------------------
+    About section
+    ----------------------*/
+    .about-section .timeline .timeline-item:nth-child(odd)
+    {
+        padding-right: 15px;
+        text-align: left;
+        padding-left: 75px;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(even)
+    {
+        padding-left: 75px;
+    }
+
+    .about-section .timeline:before
+    {
+        left: 35px;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(odd) .icon
+    {
+        right: auto;
+        left: -60px;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(even) .icon
+    {
+        left: -60px;
+    }
+
+    .about-section .timeline .timeline-item
+    {
+        margin-bottom: 40px;
+    }
+
+    .about-section .timeline .timeline-item:last-child
+    {
+        margin-bottom: 0;
+    }
+
+    .about-section .timeline .timeline-item:nth-child(odd) .timeline-item-inner:before
+    {
+        left: -30px;
+        right: auto;
+    }
+
+
+    /*----------------------
+    Contact section
+    ----------------------*/
+    .contact-section .submit-btn
+    {
+        text-align: center;
+    }
+}
+
+@media(max-width: 700px)
+{
+    .service-section .service-item
+    {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
 
 @media(max-width: 574px)
@@ -41,5 +114,10 @@
     .home-section .home-img .img-box
     {
         max-width: 260px;
+    }
+
+    .home-section .home-text h2
+    {
+        font-size: 40px;
     }
 } 

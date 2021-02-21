@@ -59,6 +59,3 @@ dayNight.addEventListener("click", () =>
     dayNight.querySelector("i").classList.toggle("fa-sun");
     document.body.classList.toggle("dark");
 });
-
-
-
