@@ -24,9 +24,15 @@ const alternateStyle = document.querySelectorAll(".alternate-style");
 
 function SetActiveStyle(color)
 {   
+    localStorage.setItem("color", color);
+    ChangeColor();
+}
+
+function ChangeColor() 
+{ 
     alternateStyle.forEach((style) =>
     {
-        if(color === style.getAttribute("title"))
+        if(localStorage.getItem("color") === style.getAttribute("title"))
         {
             style.removeAttribute("disabled");
         }
@@ -35,6 +41,11 @@ function SetActiveStyle(color)
             style.setAttribute("disabled", "true");
         }
     });
+}
+
+if(localStorage.getItem("color") !== null)
+{
+    ChangeColor();
 }
 
 
