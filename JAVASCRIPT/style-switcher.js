@@ -53,20 +53,34 @@ if(localStorage.getItem("color") !== null)
 /*-------------------- Light/Dark Mode --------------------*/
 const dayNight = document.querySelector(".day-night");
 
-window.addEventListener("load", () =>
+function ChangeTheme()
 {
-    if(document.body.classList.contains("dark"))
+    if(localStorage.getItem("theme") === 'dark')
     {
         dayNight.querySelector("i").classList.add("fa-sun");
+        document.body.classList.add("dark");
     }
-    else
+    else if(localStorage.getItem("theme") === 'light')
     {
-        dayNight.querySelector("i").classList.add("fa-moon");
+        dayNight.querySelector("i").classList.remove("fa-sun");
+        document.body.classList.remove("dark");
     }
-});
+}
 
 dayNight.addEventListener("click", () =>
 {
-    dayNight.querySelector("i").classList.toggle("fa-sun");
-    document.body.classList.toggle("dark");
+    if(dayNight.querySelector("i").classList.contains("fa-sun"))
+    {
+        localStorage.setItem("theme", "light");
+    }
+    else
+    {
+        localStorage.setItem("theme", "dark");
+    }
+    ChangeTheme();
 });
+
+if(localStorage.getItem("theme") !== null)
+{
+    ChangeTheme();
+}
