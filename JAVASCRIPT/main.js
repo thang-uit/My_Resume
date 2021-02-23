@@ -60,7 +60,7 @@
                             item.classList.remove("outer-shadow", "hover-in-shadow");  
                             item.classList.add("inner-shadow", "active");
                         }                                                         
-                    })
+                    });
                 }
                 window.location.hash = hash;
             }
@@ -132,7 +132,7 @@ function BodyScrollingToggle()
                     item.classList.remove("show");
                     item.classList.add("hide");
                 }
-            })
+            });
         }
     });
 
