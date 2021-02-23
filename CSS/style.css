@@ -1670,3 +1670,50 @@ Contact Section
     text-align: right;
     padding: 0 15px;
 }
+
+
+
+/*----------------------
+Reference Section
+----------------------*/
+.reference-section
+{
+    padding: 80px 0 80px;
+    min-height: 100vh;
+}
+
+.reference-section .section-title
+{
+    margin-bottom: 40px;
+}
+
+.reference-section .reference-item
+{
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.reference-section .reference-item-inner
+{
+    padding: 15px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.reference-section .reference-item-frame iframe
+{
+    width: 100%;
+    max-width: 100%;
+}
+
+.reference-section .reference-item-inner p
+{
+    font-size: 20px;
+    margin: 10px 0 0;
+    color: var(--text-black-600);
+    text-transform: capitalize;
+    word-break: break-word; /* Không bị tràn dòng ra ngoài */
+}

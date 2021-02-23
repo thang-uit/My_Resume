@@ -1,7 +1,7 @@
 
 @media(max-width: 780px) 
 {
-    .home-section .home-text, .home-section .home-img, .about-section .about-img, .about-section .about-info, .about-section .skills .skill-item, .portfolio-section .portfolio-item, .portfolio-popup .description, .portfolio-popup .info
+    .home-section .home-text, .home-section .home-img, .about-section .about-img, .about-section .about-info, .about-section .skills .skill-item, .portfolio-section .portfolio-item, .portfolio-popup .description, .portfolio-popup .info, .reference-section .reference-item
     {
         flex: 0 0 100%;
         max-width: 100%;
@@ -129,4 +129,4 @@
     {
         font-size: 40px;
     }
-} 
+}
