@@ -112,7 +112,7 @@ function BodyScrollingToggle()
 
     let itemIndex, slideIndex, screenshots;
 
-    filterContainer.addEventListener("click", (event)=>
+    filterContainer.addEventListener("click", (event) =>
     {
         if(event.target.classList.contains("filter-item") && !event.target.classList.contains("active"))
         {
